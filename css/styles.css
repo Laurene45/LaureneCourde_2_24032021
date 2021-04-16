@@ -3,138 +3,198 @@
 
 
 /***Structure***/
-body {
-    margin: auto;
-    padding: auto;
-    min-width: 320px;
+body {margin:auto;
+    max-width:1200px;
+    max-width:1200px; 
+	width:100%; 
     font-family: Raleway;
 }
 
-header{
-	display:flex;
-	align-items: center;
-	justify-content: space-between;
-    margin-top: 30px;
+.container{
+    padding:0 30px;
 }
 
+.entête {
+    display:flex;
+}
 
 
 /***Navigation***/
 nav {
     width: 100%;
-    display: flex;
+    display:flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
     padding-right:80px;    
 }
 
-nav img {
-    margin: auto;
-    margin-left: 5%;
-}
- 
 nav a{
 	display: inline-block;
 	margin:0 20px;
 	padding:16px 10px;
 	text-decoration: none;
 	color:#000000;
+    border-top: 3px solid transparent;
 }
 
 nav a:hover{
     border-top: 3px solid #0065fc;
-	color: #000000;
+	color: #0065fc;
 }
 
 nav p {
     color: #0065fc;
     font-weight: 700;
     padding-left: 20px;
+    border-top: 3px solid transparent;
 }
-
 
 
 /*** Titres ***/
-.bloc1 {
-    width: 90%;
-    margin: auto;
-    padding: 20px 0;
-}
-
-#presentation h2 {
+#presentation h1 {
     font-size: 22px;
     font-weight: 700;
 }
 
-#presentation h3 {
-    font-size: 16px;
+#presentation h2 {
+    font-size: 14px;
     font-weight: 400;
 }
 
 
-
-/*** Filtrages ***/
-#filtres{
-    display:flex;
-    flex-wrap: wrap;  
-    align-items: baseline;  
+/***Geolocalisation***/
+.iconemaps{
+	background-color:#F2F2F2;
+	width: 38px;
+	height: 40px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	display: flex;
+	margin-top: 30px;
+	border:none;
+	padding-right: 10px;
 }
 
-#filtres p{
-    font-size: 16px;
+.barrerecherche{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 18px 0px 18px 18px;
+	margin: 0px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#search{
+	margin: 18px 0px 18px 18px;
+	border: none;
+	padding: 12px 12px 12px 12px ;
+}
+
+.iconesearch{
+    display:none;
+}
+
+button{
+	background-color: #0065FC;
+	border:none;
+	color: white;
+	height: 42px;
+	border-bottom-right-radius:10px;
+	border-top-right-radius: 10px;
+	padding-right: 18px;
+	padding-left: 18px;
+	font-weight: bold;
+}
+
+input {
+    color:#000000;
+    font-weight: 600;
+}
+
+.iconemap i{
+    font-size: 18px;
+    color: #000000;
+}
+
+
+/***Filtrage***/
+.filtres{
+    display:flex;
+    align-items:center; 
+}
+
+.filtres h3{
+    font-size: 15px;
     font-weight: 700;
     margin-right: 1%;
 }
 
-#filtres ul{
+.filtres ul{
     list-style-type : none;
     display: flex;
-    flex-wrap:wrap;
-    padding-left: 0;
-    
+    flex-wrap:wrap;  
 }
 
-#filtres ul li{
-    font-size: 15px;
-    font-weight: 700;
-    border: 2px solid #f2F2F2;
-    border-radius: 25px;
-    margin-left: 30px;
-    padding: 5px 8px 5px 5px;
-    
+.filtre {
+    background-color: #ffffff;
+    border: 2px solid #f2f2f2;
+    border-radius: 30px;
+    display:flex;
+    align-items:center;
+    margin: 10px 20px 10px 0px;
+    position:relative;
+    height: 42px;
+    padding-left: 42px;
 }
 
+.icon {
+    border: 1px solid #DEEBFF;
+    border-radius: 20px;
+    background-color: #DEEBFF;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: absolute;
+    left: 0px;
+    width:40px;
+    height: 40px;
+}
 
-#filtres i {
-    padding-right : 10px;
-    border: 2px solid #f2F2F2;
-    border-radius: 25px;
-    padding: 8px;
+.icon i {
+    font-size: 18px;
+}
+
+.filtre-descript{
+    color: #000000;
+    padding: 0px 10px 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.filtre:hover{
     background-color: #DEEBFF;
 }
-
-#filtres ul li:hover{
-    background-color: #DEEBFF;
-
-}
-
 
 
 /*** Informations ***/
 #info p {
     display: flex;
     align-items: baseline;
-  }
+    font-size: 13px;
+}
 
 #iconinfo{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: baseline;
     text-align: center;
 
-    min-width: 25px;
-    max-width: 25px;
-    max-height: 25px;
-    min-height: 25px;
+    min-width: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    min-height: 20px;
 
     margin-right: 5px;
     padding: 1px;
@@ -144,12 +204,210 @@ nav p {
     font-size: 12px;
 }
 
-
 .fas {
     color:#0065fc;
 }
 
 
+/*** Hebergements ***/
+#section2  {
+    display:flex;
+}
+
+.hebergements{
+    width:100%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-right: 25px;
+    padding: 10px 10px 10px  10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bloc{
+    border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	border: none;
+	padding:5px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	margin: 15px;
+	box-shadow: 0 0 2em rgba(194, 194, 194, 0.8); 
+    text-decoration: none;  
+    width: 25%;
+}
+
+.titreh2{
+    font-size: 22px;
+    font-weight: 700;  
+    height: 40px;
+	width: 100%;
+	margin:0;
+    padding-left:15px;
+}
+
+.afficherplus{
+    font-weight: 700;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+      /*Bloc image hebergements*/
+.imagehebergement{
+    border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+    width:183px;
+    height: 120px;
+    object-fit: cover; 
+    
+}
+
+.bloc h3 {
+    font-size: 15px;
+    padding-left: 10px;
+    margin:0;
+    margin-top: 5px;
+    line-height: 1rem;
+
+}
+
+.bloc p{
+    font-size: 14px;
+    padding-left: 10px;
+    margin:0;
+    margin-top:5px;
+    line-height: 1rem;
+}
+
+.etoile{
+    font-size: 10px;
+    padding-left: 10px;
+    flex-direction: column;
+	max-width:150px;
+}
+
+.fa-star
+{
+	color: #0065FC;
+	padding-top: 10px;
+}
+
+
+/*** les + populaires ***/
+.populaire{
+    display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
+	margin-left: 0px;
+	background-color: #F2F2F2;
+	border-radius: 10px;
+	width: 400px;
+    padding: 10px 10px 10px 10px;
+}
+
+.pop{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+    
+}
+
+.titre{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    font-size: 22px;
+    font-weight: 700;  
+    height: 40px;
+	width: 100%;
+    padding-left:15px;
+    margin-top: -10px;
+}
+
+.fa-chart-line{
+    color: #000000;
+}
+
+      /*Bloc image les + populaires*/
+section .blocpop{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.zonepop{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top:10px;
+}
+
+.blocpop{
+    height:120px;
+	width:300px;
+	display: flex;
+	flex-wrap: wrap;
+    align-items:center;
+    border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding:5px;
+	box-shadow:0 0 2em rgba(194, 194, 194, 0.8); 
+    margin: 15px;
+    margin-bottom: 40px;
+    text-decoration: none;
+}  
+
+
+.imgpop {
+    display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+    height: 120px;
+	width:130px; 
+    object-fit: cover; 
+   
+}
+
+.blocpop h3 {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    padding-left: 10px;
+    margin:0;
+    margin-top: 6px;
+    line-height: 1rem;
+}
+
+.blocpop p{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    padding-left: 10px;
+    margin:0;
+    margin-top:5px;
+    line-height: 1rem;
+    padding-bottom: 30px;
+}
+
+.fa-star
+{
+	color: #0065FC;
+	padding-top: 10px;
+}
+
+
+/*** Activités ***/
+/* a faire */
 
 
 
@@ -158,17 +416,25 @@ nav p {
 
 
 /*** Footer ***/
-footer div {
+footer{
     background-color: #F2F2F2;
+    width: 100%;
+}
+
+footer div {
     display: flex;
     flex-direction: row;
     align-content: flex-start;
-    padding-left: 5%;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+    padding-top: 30px;   
 }
 
 footer div section {
-    padding-right: 10%;
+    width:30%;
+    min-width: 300px;
+    margin-bottom: 30px;
+    font-size: 15px;
 }
 
 footer ul {
@@ -179,6 +445,7 @@ footer ul {
 
 footer ul li {
     margin-top: 10px;
+    
 }
 
 footer ul li a{
@@ -189,7 +456,327 @@ footer ul li a{
    
 
 
+/*********************/
+/**** RESPONSIVE *****/
+/*********************/
+
+@media screen and (max-width: 1024px){  /*laptop */
+
+/*Bloc image hebergements*/
+    .bloc{
+        width: 160px;
+        margin: 8px;  
+    }
+
+    .imagehebergement{
+        width:160px;
+        height: 100px;
+    }
+
+
+/*les + populaires */ 
+    .zonepop{
+        margin-top:5px;
+    }
+
+    .blocpop{
+        height:100px;
+        width:300px;
+    }  
+
+    .imgpop {
+        height: 100px;
+        width:110px;  
+    }
+
+    .blocpop p{
+        padding-bottom: 15px;
+    }  
+    
+}
+
+
+@media screen and (max-width: 768px){  /*tablette*/
+
+/*Geolocalisation*/
+
+    button {
+        display: none;
+    }
+
+    .iconesearch{
+        display: flex;
+        color: white;
+        background-color:#0065FC;
+        width: 30px;
+        align-items: center;
+        justify-content: center;
+        padding:12px;
+        border-radius: 10px ;
+    }
+
+    .fa-search{
+        color:#ffffff;
+    }
+
+/*Filtrage*/
+    .filtres ul{
+        flex-wrap:wrap;  
+        width: 70%;
+    }
+
+    .filtres{
+        align-items:baseline; 
+    }
+
+
+/*Hebergements*/ 
+    #section2  {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .hebergements{
+        order:2
+    }
+
+    .bloc {
+        width: 190px;
+        height: 180px;
+        margin: 15px;
+    }
+
+    .imagehebergement{
+        width:190px;
+        height: 100px;
+     
+    }
+
+
+/*les+populaires*/ 
+    .populaire {
+        order:1;
+        width: 100%;
+        margin-bottom: 25px;
+        
+    }
+
+    .blocpop{
+        width: 190px;
+        height: 300px;
+        border-radius: 10px;
+        margin: 15px;
+    }
+
+    .imgpop {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0px;
+        width:190px;
+        height: 200px;
+        
+    }
+
+    .blocpop h3{
+        margin-top: 5px;
+        line-height: 1rem;
+    }
+
+
+/*Footer*/
+
+    footer div {
+        justify-content: space-between;
+    }
+
+    footer div section {
+        width: 25%;
+        min-width: 200px;
+        font-size: 14px;
+        
+    }
+
+}
+
+
+@media screen and (max-width: 425px){  /*Mobile-L*/
+
+/*logo*/
+    .logo{
+    margin: 0;
+    }
+
+/*Navigation*/
+    nav {
+        height: 70px;
+        width: 75%;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        padding-left:0px;
+        padding-right:0px;
+    }
+
+    nav a{
+        display: inline-block;
+        text-decoration: none;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid #F2F2F2;
+        padding-left:25px ;
+        padding-top: 45px;
+        margin: auto;
+        margin-top:20px ;
+        width: 100%;
+    }
+    
+    nav p {
+        order: 2;
+        margin: 0;
+        margin-left: 30px;
+        padding-bottom: 0;
+        width: auto;
+        margin: auto;
+    
+    }
+
+    nav a:hover{
+        color: #0065fc;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid #0065fc;
+    }
+
+    #presentation{
+        margin-top:65px;
+    }
+
+/*Hebergements */ 
+    #section2  {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .hebergements{
+        order:2;
+        background-color: #FFFFFF;
+        border-radius: 0px;
+        margin:0;
+    }
+
+    .bloc {
+        width: 310px;
+        height: 210px;
+        margin: 10px;
+    }
+
+    .imagehebergement{
+        width:320px;
+        height: 130px; 
+    }
+
+    .bloc h3{
+        padding-right: 90px;
+    }
+
+    .bloc p{
+        padding-right: 180px;
+    }
+
+
+/*les + populaires */ 
+    .populaire {
+        border-radius: 0px;
+        padding-left: 20px;
+        width: 330px;
+    }
+    .zonepop{
+        margin-top:5px;
+    }
+
+    .titre{
+        padding-left: 10px;
+    }
+
+    .blocpop{
+        height:120px;
+        width:330px;
+    }  
+
+    .imgpop {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        height: 120px;
+        width:130px;   
+    }
+
+/*footer*/
+    footer div section {
+        width: 30%;
+        min-width: 300px;
+    }
+
+}
+
+
+@media screen and (max-width: 375px){  /*Mobile Iphone 8*/
+
+/*Hebergements */ 
+    .bloc {
+        width: 270px;
+        height: 180px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .titreh2 {
+        padding-left: 0px;
+    }
+
+    .imagehebergement{
+        width:290px;
+        height: 80px;
+    
+    }
+
+
+/*les + populaires */ 
+    .populaire {
+        padding-left: 15px;
+        width: 280px;
+    }
  
+    .blocpop{
+        height:100px;
+        width:280px;
+    }  
+
+    .titre{
+        padding-left: 0px;
+    }
+
+    .imgpop {
+        height: 100px;
+        width:100px;   
+    }
+
+    .blocpop p{
+        padding-bottom: 15px;
+    }  
+
+  
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
